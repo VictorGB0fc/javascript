@@ -1,5 +1,5 @@
 #javascript
-  //Converte um Número para Romanos
+//Converte um Número para Romanos
 function numeroRomano(num) {
  const valores = [
     [1000, "M"]
@@ -16,4 +16,14 @@ function numeroRomano(num) {
     [4, "IV"]
     [1, "I"]
  ];
+let resultado = "";
+for (let [valor, simbolo] of valores) {
+    while (num >= valor){
+        resultado += simbolo;
+        num = valor;
+
+    }
+ }
+ return resultado;
 }
+console.log(numeroRomano(4))
